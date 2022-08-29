@@ -2,13 +2,17 @@
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Sid": "VisualEditor0",
       "Effect": "Allow",
-      "Action": ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"],
-      "Resource": "arn:aws:logs:*:*:*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": ["ec2:Start*", "ec2:Stop*"],
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:StartInstances",
+        "ec2:DescribeTags",
+        "logs:*",
+        "ec2:DescribeInstanceTypes",
+        "ec2:StopInstances",
+        "ec2:DescribeInstanceStatus"
+      ],
       "Resource": "*"
     }
   ]
