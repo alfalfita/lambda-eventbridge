@@ -9,5 +9,4 @@ def lambda_handler(event, context):
     for instance in instances:
         id=instance.id
         ec2.instances.filter(InstanceIds=[id]).start()
-        print("Instance ID is started :- "+instance.id)
     return "success"
